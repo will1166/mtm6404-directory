@@ -30,3 +30,15 @@ const info = chosenIndex => {
     // find() loops the clients array and returns the matching object
     return clients.find(client => chosenIndex === client.index);
 };
+
+// 6. search function to return an array of clients that include the query in their name
+const search = query => {
+    // Convert search to lowercase
+    const lowerCaseQuery = query.toLowerCase();
+
+    // filter() returns only what contains that item
+    return clients.filter(client => {
+        // Convert the client's names to lowercase and check
+        return client.name.toLowerCase().includes(lowerCaseQuery);
+    });
+};
