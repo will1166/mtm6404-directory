@@ -24,3 +24,9 @@ const total = clientArray => {
         return accumulator + client.balance;
     }, 0);
 };
+
+// 5. info function to return an object containing the desired client information
+const info = chosenIndex => {
+    // find() loops the clients array and returns the matching object
+    return clients.find(client => chosenIndex === client.index);
+};
