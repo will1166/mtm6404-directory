@@ -42,3 +42,5 @@ const search = query => {
         return client.name.toLowerCase().includes(lowerCaseQuery);
     });
 };
+
+// Completes the assignment
