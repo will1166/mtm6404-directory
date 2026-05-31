@@ -16,3 +16,11 @@ const order = (clientArray, property) => {
         return 0; // keeps original order if values are equal
     });
 };
+
+// 4. total function with total sum of the balances from every client
+const total = clientArray => {
+    // reduce() to calculate the sum of all client balances
+    return clientArray.reduce((accumulator, client)=> {
+        return accumulator + client.balance;
+    }, 0);
+};
